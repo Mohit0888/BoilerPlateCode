@@ -5,7 +5,8 @@ from .views import home
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home, name='home '),
+    path('home', home, name='home '),
+    path('student',include('school.urls')),
 ]
 
 if settings.DEBUG:
